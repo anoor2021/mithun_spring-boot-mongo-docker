@@ -22,8 +22,8 @@ spec:
           containerPort: 8080
 
 # Node Port Service
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   labels:
     app: springboot
@@ -69,8 +69,8 @@ spec:
          path: /tmp/dbbackup
 
 # Mongo Node Port RC
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   labels:
     app: mongo
