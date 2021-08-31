@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+  name: springboot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+       app: springboot
+  template:
+    metadata:
+      labels:
+        app: springboot
+    spec:
+      containers:
+      - image: asifaan/spring-boot-mongo
+        name: springboot
+        ports:
+        - name: springboot
+          containerPort: 8080
